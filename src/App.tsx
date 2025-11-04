@@ -55,6 +55,10 @@ export default function App() {
     );
   };
 
+  const deleteTask = (id: string) => {
+    setTasks((prev) => prev.filter((t) => t.id !== id));
+  };
+
   return (
     <div className="app">
       <h1>Task Manager</h1>
@@ -90,6 +94,13 @@ export default function App() {
                 {task.title}
               </span>
             </label>
+            <button
+              className="delete-btn"
+              onClick={() => deleteTask(task.id)}
+              aria-label={`Delete "${task.title}"`}
+            >
+              Delete
+            </button>
           </li>
         ))}
         {tasks.length === 0 && <li className="empty">No tasks yet. Add one above.</li>}

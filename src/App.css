@@ -70,15 +70,15 @@ h1 {
 
 .add-form button {
     padding: 10px 14px;
-    border: 1px solid #2b6cb0;
-    background: #2b6cb0;
+    border: 1px solid #E96A2C;
+    background: linear-gradient(135deg, #E96A2C 0%, #F39B3C 60%, #F7B85A 100%);
     color: white;
     border-radius: 6px;
     cursor: pointer;
 }
 
 .add-form button:hover {
-    background: #245fa0;
+    filter: brightness(0.95);
 }
 
 .summary {
@@ -95,14 +95,32 @@ h1 {
 }
 
 .task {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     border-bottom: 1px solid #eee;
+    padding: 6px 0;
 }
 
 .task-item {
+    flex: 1;
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px 0;
+}
+
+.delete-btn {
+    padding: 8px 12px;
+    border: 1px solid #d33;
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    filter: brightness(0.95);
 }
 
 .title.completed {
